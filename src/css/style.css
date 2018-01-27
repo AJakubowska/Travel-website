@@ -1,0 +1,8 @@
+.body {
+  background-color: white;
+  color: black;
+  box-sizing: border-box; }
+
+.menu, .header, .main, .aside, .footer {
+  border: 2px solid black;
+  color: red; }

@@ -1,0 +1,15 @@
+@import "settings";
+
+
+
+
+.body {
+  background-color: $color-bg;
+  color: $color-text;
+  box-sizing: border-box;
+}
+
+.menu, .header, .main, .aside, .footer  {
+  border: $border;
+  color: red;
+}
