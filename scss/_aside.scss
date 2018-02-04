@@ -1,0 +1,126 @@
+
+.aside{
+    padding: 10px;
+    text-align: center;
+    top: 40px;
+ }
+
+.aside__wheel {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    top: 40px;
+}
+
+.aside-wheel__rotating {
+    transition: width 0.05s, height 0.05s;
+    display: flex;
+    transform: rotate(360deg);
+    width: 100%;
+    height: 100%;
+}
+
+@-webkit-keyframes rotating {
+    from{
+    -webkit-transform: rotate(0deg);
+    }
+    to{
+    -webkit-transform: rotate(360deg);
+    }
+}
+
+.rotating {
+    -webkit-animation: rotating 15s linear infinite;
+}
+
+.aside__wheel {
+  width: 150px;
+  height: 153px;
+  background: transparent;
+}
+.aside-latest__title {
+    font-family: $font;
+    top: 40px;
+ }
+
+.latest__post{
+    @include position-settings
+}
+
+.latest-post__image {
+    width: 40%;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.latest-post-image__mini {
+    width: 100%;
+    transition: transform 0.7s ease;
+
+    &:hover{
+    transform: translateX(-10px);
+    }
+
+    &:active{
+      transform: translateY(10px);
+    }
+}
+
+.latest-post__text {
+    padding: 5px;
+    font-size: 2rem;
+    text-align: center;
+    width: 50%;
+}
+
+.latest-post-text__link {
+    font-family: $font2;
+
+    &:link {
+        text-decoration: none;
+        color: $color-text;
+    }
+
+    &:hover {
+        color: $color-text;
+    }
+}
+
+.latest-post-text-link__date {
+    font-family: $font2;
+    font-size: 0.8rem;
+    color: $color-text;
+}
+
+.aside-search__input{
+    font-family: $font2;
+}
+
+.search-input__query {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    &:focus {
+        outline: none
+    }
+}
+
+.search-input__button {
+    width: 70%;
+    @include buttons(#495f77)
+    padding: 14px 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 576px) {
+    .latest-post-text-link__date, .latest-post-text__link {
+        font-size: 1.0rem;
+    }
+
+    .aside-latest__title {
+        font-family: $font;
+        bottom: 40px;
+     }
+}
